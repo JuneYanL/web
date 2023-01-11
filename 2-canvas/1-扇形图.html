@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>扇形图</title>
+</head>
+<body>
+  <canvas class="minganImg" id="c1" width="80" height="80">当前浏览器不支持canvas，请下载最新版</canvas>
+  <script>
+    let n = 0.8*360;//80%的扇形图
+    let canvas = document.querySelector('#c1')
+    let ctx = canvas.getContext("2d") //Context 上下文，canvas的2D渲染
+    ctx.beginPath();
+    let deg=Math.PI/180;
+    ctx.fillStyle = '#2aaaff';
+    ctx.arc(40,40,40,270*deg,(270+n)*deg)//以45度开始
+    ctx.lineTo(40,40)
+    ctx.fill()
+  </script>
+</body>
+</html>
